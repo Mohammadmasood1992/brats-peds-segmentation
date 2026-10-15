@@ -1,0 +1,5 @@
+# Same model on the aligned images without histogram matching (brain-masked, z-scored per subject),
+# to measure the effect of histogram matching.
+data_version: raw
+dim: 3d
+brain_mask: true

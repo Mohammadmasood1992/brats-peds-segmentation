@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brats-peds-seg"
+version = "0.1.0"
+description = "Preprocessing (rigid alignment, brain-masked histogram matching) and configurable 2D/3D U-Net segmentation of pediatric brain tumors (BraTS-PEDs)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=2.4",
+    "monai>=1.4",
+    "numpy",
+    "scipy",
+    "pandas",
+    "scikit-learn",
+    "scikit-image",
+    "nibabel",
+    "SimpleITK",
+    "matplotlib",
+    "seaborn",
+    "tqdm",
+    "tensorboard",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyter"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

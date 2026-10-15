@@ -1,0 +1,5 @@
+# 2.5D U-Net: axial slices with two neighbouring slices per side as extra channels.
+data_version: histmatched
+dim: 2d
+slice_axis: 2
+context_slices: 2

@@ -1,0 +1,6 @@
+# 3D U-Net with attention: transformer bottleneck, attention gates on skips and CBAM in every block.
+data_version: histmatched
+dim: 3d
+bottleneck: transformer
+skip_attention: true
+block_attention: cbam

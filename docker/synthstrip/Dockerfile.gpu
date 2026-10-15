@@ -1,0 +1,10 @@
+FROM freesurfer/synthstrip:1.8
+ARG TORCH_VERSION=2.1.2
+ARG CUDA_TAG=cu121
+RUN pip3 uninstall -y torch && \
+    pip3 install --user --no-cache-dir \
+      --index-url https://download.pytorch.org/whl/${CUDA_TAG} \
+      --extra-index-url https://pypi.org/simple \
+      torch==${TORCH_VERSION}
+ENV TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1
+ENTRYPOINT ["mri_synthstrip"]

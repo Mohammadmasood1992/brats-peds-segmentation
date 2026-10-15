@@ -1,0 +1,4 @@
+# 3D U-Net on brain-masked, histogram-matched inputs (the defaults in src/brats_peds_seg/config.py).
+# Every option is documented in DEFAULT_CONFIG; list only what an experiment changes.
+data_version: histmatched
+dim: 3d

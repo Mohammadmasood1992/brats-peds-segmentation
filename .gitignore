@@ -1,0 +1,37 @@
+# data, derived data and results (never commit imaging data)
+data/
+cache/
+runs/
+reports/
+predictions/
+*.nii
+*.nii.gz
+*.mgz
+*.npy
+*.npz
+
+# model weights and logs
+*.pt
+*.pth
+*.ckpt
+events.out.tfevents.*
+*.log
+
+# python / notebooks
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# environment / editor
+.env
+.venv/
+.vscode/
+.idea/
+.DS_Store
+
+# third-party documents
+*.pdf
